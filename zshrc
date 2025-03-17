@@ -8,12 +8,12 @@ export XDG_CONFIG_HOME="${HOME}/.config"
 export XDG_STATE_HOME="${HOME}/.local/state"
 export XDG_CACHE_HOME="${HOME}/.cache"
 export XDG_BIN_HOME="${HOME}/.local/bin"
-if ! grep -q "$XDG_BIN_HOME" <<<$PATH; then
+if ! grep -q "${XDG_BIN_HOME}" <<<$PATH; then
   PATH="${XDG_BIN_HOME}:$PATH"
 fi
 
 # Load Uservars
-ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+ZDOTDIR="${XDG_CONFIG_HOME}/zsh"
 
 # Load functions
 autoload -U compinit colors
@@ -23,7 +23,7 @@ colors
 printf 'Running init script: \e[s'
 for __x in ${ZDOTDIR}/init/*.zsh; do
   printf '\e[u\e[K%s' "${__x##*/}"
-  source $__x
+  source ${__x}
 done
 unset __x
 printf '\r\e[K'
