@@ -2,7 +2,13 @@
 LANG=en_GB.UTF8
 
 # Editor
-export EDITOR=/usr/bin/nvim
+for _x in nvim vim vi; do
+    if command -v ${_x} &> /dev/null; then
+        export EDITOR=$(command -v ${_x})
+        break
+    fi
+done
+unset _x
 
 # Make rust behave
 if [ -d "${XDG_DATA_HOME}/cargo" ]; then
