@@ -1,7 +1,7 @@
 # Settings for agkozak's prompt
 
 # Symbol order: diverged, behind, ahead, new file, deleted, modified, renamed, untracked, staged
-AGKOZAK_CUSTOM_SYMBOLS=( '⇣⇡' '⇣' '⇡' '﻿' '﻿' '﻿' '﻿' '󱀶﻿' '﻿')
+AGKOZAK_CUSTOM_SYMBOLS=( ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ')
 
 #custom prompt
 AGKOZAK_CUSTOM_PROMPT=''
